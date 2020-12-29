@@ -42,7 +42,7 @@ function setup() {
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
   
-  ground = createSprite(width/2,height,width,2);
+  ground = createSprite(width/2,height-100 ,width,125);
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
@@ -78,7 +78,7 @@ function draw() {
     ground.velocityX = -(6 + 3*score/100);
   
     if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-120) {
-      jumpSound.play( )
+      
       trex.velocityY = -10;
        touches = [];
     }
